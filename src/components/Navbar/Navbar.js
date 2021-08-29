@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import {MenuItems} from "./MenuItems"
+import {Button} from "../Button"
 import './Navbar.css'
 
 class Navbar extends Component{
@@ -20,7 +21,7 @@ class Navbar extends Component{
                 {MenuItems.map((item,index)=>{
                     return (
                         <li key={index}>
-                        <a className={MenuItems.cName} href={item.url}>
+                        <a className={item.cName} href={item.url}>
 
                             {item.title}
                         </a>
@@ -29,6 +30,7 @@ class Navbar extends Component{
                 })}
                
             </ul>
+            <Button>Sign Up</Button>
         </nav>
     
         )
